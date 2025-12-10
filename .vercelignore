@@ -1,0 +1,9 @@
+node_modules
+.git
+.astro
+.editorconfig
+.claude
+*.log
+.env
+.env.*
+!.env.example
