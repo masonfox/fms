@@ -1,0 +1,43 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'Fox Mortuary Services, LLC | Professional Funeral Trade Services',
+  description = 'Licensed funeral trade establishment serving funeral homes across Northwest Ohio, Southern Michigan, and Northeast Indiana. Over 30 years of professional embalming, cremation, and funeral services.',
+  image = '/images/og-image.jpg',
+  canonical = Astro.url.pathname,
+} = Astro.props;
+
+const siteTitle = title.includes('Fox Mortuary') ? title : `${title} | Fox Mortuary Services`;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="generator" content={Astro.generator} />
+
+<title>{siteTitle}</title>
+
+<link rel="canonical" href={new URL(canonical, Astro.site).href} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={siteTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={siteTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.site)} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />

@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  height?: 'small' | 'medium' | 'large';
+}
+
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  height = 'medium',
+} = Astro.props;
+
+const heightClasses = {
+  small: 'h-48 sm:h-64',
+  medium: 'h-64 sm:h-80 md:h-96',
+  large: 'h-80 sm:h-96 md:h-[32rem]',
+};
+---
+
+<section class={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}>
+  <!-- Background with overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-forest-800 via-forest-700 to-forest-900">
+    {backgroundImage && (
+      <img
+        src={backgroundImage}
+        alt=""
+        class="w-full h-full object-cover opacity-20"
+      />
+    )}
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 to-transparent"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 leading-tight">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-lg sm:text-xl md:text-2xl text-gold-200 font-light max-w-2xl mx-auto">
+        {subtitle}
+      </p>
+    )}
+  </div>
+
+  <!-- Decorative element -->
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+</section>

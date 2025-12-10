@@ -1,0 +1,115 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import Button from '@components/Button.astro';
+---
+
+<BaseLayout
+  title="About Us"
+  description="Learn about Fox Mortuary Services, a licensed funeral trade establishment with over 30 years of experience serving funeral homes across the tri-state area."
+>
+  <Hero
+    title="About Fox Mortuary Services"
+    subtitle="Over 30 years of dedicated service to the funeral industry"
+    height="medium"
+  />
+
+  <Section padding="large">
+    <div class="max-w-4xl mx-auto">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mb-6">
+          Our Story
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Fox Mortuary Services, LLC is an Ohio-based licensed funeral trade establishment
+          that has been serving funeral homes across Northwest Ohio, Southern Michigan, and
+          Northeast Indiana for over 30 years. We specialize in providing comprehensive
+          professional services to funeral industry professionals, not the general public.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Our approach is built on a simple but powerful commitment: the owner and full-time
+          staff of Fox Mortuary Services personally perform all embalming, preparation,
+          restoration, and related services. This ensures consistent quality and professional
+          care in either our Ohio-licensed facility or at client funeral homes.
+        </p>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Our Philosophy
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We recognize that funeral service by its very nature is as varied as the individuals
+          served in each community. This understanding guides our work and shapes our commitment
+          to adaptability and excellence.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Unlike other livery or transport services in Northwest Ohio, we guarantee that our
+          experienced team will handle your embalming, preparation, restoration, and related
+          services. This personal touch is what sets us apart and ensures the quality you
+          expect for the families you serve.
+        </p>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Our Team
+        </h2>
+        <div class="bg-forest-50 p-8 rounded-lg mb-6">
+          <h3 class="text-2xl font-serif font-semibold text-forest-800 mb-3">
+            David H. Fox, Jr.
+          </h3>
+          <p class="text-gold-700 font-medium mb-4">Managing Director</p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            With over 40 years of experience in the funeral service industry, David H. Fox, Jr.
+            leads Fox Mortuary Services with a commitment to professional excellence and
+            respectful service. A 1983 graduate of Cincinnati College of Mortuary Science,
+            David has personally embalmed over 15,000 cases throughout his distinguished career.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            His dedication to serving funeral homes has established Fox Mortuary Services as
+            a trusted partner throughout the tri-state area.
+          </p>
+        </div>
+        <div class="mb-8">
+          <Button href="/about/staff/" variant="outline" size="medium">
+            Meet Our Full Staff Team
+          </Button>
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Professional Memberships
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div class="border-l-4 border-gold-500 pl-4">
+            <p class="font-semibold text-forest-800">American Society of Embalmers</p>
+          </div>
+          <div class="border-l-4 border-gold-500 pl-4">
+            <p class="font-semibold text-forest-800">Ohio Embalmers Association</p>
+          </div>
+          <div class="border-l-4 border-gold-500 pl-4">
+            <p class="font-semibold text-forest-800">Chamber of Commerce</p>
+          </div>
+          <div class="border-l-4 border-gold-500 pl-4">
+            <p class="font-semibold text-forest-800">Boy Scouts of America Charter Member</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Our Service Area
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We proudly serve funeral homes throughout:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8">
+          <li>Northwest Ohio</li>
+          <li>Southern Michigan</li>
+          <li>Northeast Indiana</li>
+        </ul>
+      </div>
+
+      <div class="text-center mt-12">
+        <Button href="/contact/" variant="primary" size="large">
+          Get in Touch
+        </Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

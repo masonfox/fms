@@ -1,0 +1,124 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import Card from '@components/Card.astro';
+import Button from '@components/Button.astro';
+---
+
+<BaseLayout
+  title="Fox Mortuary Services, LLC"
+  description="Licensed funeral trade establishment serving funeral homes across Northwest Ohio, Southern Michigan, and Northeast Indiana. Over 30 years of professional embalming, cremation, and funeral services."
+>
+  <Hero
+    title="Serving Those Who Serve Their Community"
+    subtitle="Professional funeral trade services for over 30 years"
+    height="large"
+  />
+
+  <Section padding="large">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-forest-800 mb-4">
+        Professional Funeral Trade Services
+      </h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        Fox Mortuary Services is a licensed funeral trade establishment providing comprehensive
+        embalming and related services to funeral homes throughout Northwest Ohio, Southern Michigan,
+        and Northeast Indiana.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Card title="Embalming & Preparation">
+        <p>
+          Professional embalming, restoration, and body preparation services performed by our
+          owner and full-time staff in Ohio-licensed facilities or at your funeral home.
+        </p>
+      </Card>
+
+      <Card title="Transportation Services">
+        <p>
+          Complete removal services, overland transportation, and domestic and international
+          shipping as a known shipper throughout our service area.
+        </p>
+      </Card>
+
+      <Card title="Cremation Services">
+        <p>
+          Full-service cremation offerings handled with dignity, respect, and the highest
+          professional standards for funeral homes and their families.
+        </p>
+      </Card>
+
+      <Card title="Document Preparation">
+        <p>
+          Prompt death certificate and document preparation services to help streamline your
+          administrative processes during difficult times.
+        </p>
+      </Card>
+
+      <Card title="Refrigeration">
+        <p>
+          Professional refrigeration services to ensure proper care and preservation until
+          final arrangements are made.
+        </p>
+      </Card>
+
+      <Card title="Direct Burials">
+        <p>
+          Comprehensive direct burial services coordinated with professionalism and attention
+          to detail for funeral homes in our service area.
+        </p>
+      </Card>
+    </div>
+  </Section>
+
+  <Section background="forest" padding="large">
+    <div class="text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-6">
+        Our Commitment to You
+      </h2>
+      <p class="text-lg text-forest-100 mb-8 leading-relaxed">
+        The owner and full-time staff of Fox Mortuary Services personally perform all embalming,
+        preparation, restoration, and related services. This commitment ensures that the funeral
+        homes we serve receive consistent, professional care that honors the trust you place in us.
+      </p>
+      <p class="text-lg text-forest-100 mb-10 leading-relaxed">
+        We understand that funeral service by its very nature is as varied as the individuals you
+        serve in your community. Our experience of over 30 years allows us to adapt to your needs
+        while maintaining the highest standards of professional service.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/services/" variant="secondary" size="large">
+          Explore Our Services
+        </Button>
+        <Button href="/contact/" variant="light" size="large">
+          Contact Us Today
+        </Button>
+      </div>
+    </div>
+  </Section>
+
+  <Section padding="large">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-gold-50 border-l-4 border-gold-500 p-6 rounded-r-lg">
+        <h3 class="text-2xl font-serif font-semibold text-forest-800 mb-4">
+          Serving Funeral Homes Since 1994
+        </h3>
+        <p class="text-gray-700 mb-4">
+          Fox Mortuary Services has proudly served funeral industry professionals for over three
+          decades. Our licensed establishment specializes in providing funeral homes with the
+          professional support services they need to serve their communities with excellence.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Under the leadership of Managing Director David H. Fox, Jr., we maintain memberships
+          with the American Society of Embalmers and the Ohio Embalmers Association, ensuring
+          our practices meet the highest industry standards.
+        </p>
+        <p class="text-sm text-forest-700 italic mt-6">
+          Contact us: <a href="tel:+14196303344" class="underline hover:text-gold-600">(419) 630-3344</a>
+        </p>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

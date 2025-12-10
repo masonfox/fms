@@ -1,0 +1,32 @@
+---
+interface Props {
+  background?: 'white' | 'gray' | 'forest' | 'gold';
+  padding?: 'small' | 'medium' | 'large';
+  class?: string;
+}
+
+const {
+  background = 'white',
+  padding = 'medium',
+  class: className = '',
+} = Astro.props;
+
+const backgroundClasses = {
+  white: 'bg-white',
+  gray: 'bg-gray-50',
+  forest: 'bg-forest-600',
+  gold: 'bg-gold-50',
+};
+
+const paddingClasses = {
+  small: 'py-8 sm:py-12',
+  medium: 'py-12 sm:py-16 md:py-20',
+  large: 'py-16 sm:py-20 md:py-24',
+};
+---
+
+<section class={`${backgroundClasses[background]} ${paddingClasses[padding]} ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <slot />
+  </div>
+</section>

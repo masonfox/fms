@@ -1,0 +1,94 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/services/', label: 'Services' },
+  { href: '/services/cremation/', label: 'Cremation' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/general-information/', label: 'General Information' },
+];
+---
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo/Brand -->
+      <a href="/" class="flex items-center space-x-2">
+        <div class="text-forest-700">
+          <h1 class="text-xl sm:text-2xl font-serif font-bold text-forest-800">
+            Fox Mortuary Services
+          </h1>
+          <p class="text-xs sm:text-sm text-forest-600 italic">
+            Serving those who serve their community
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`text-sm font-medium transition-colors hover:text-gold-600 ${
+              currentPath === item.href
+                ? 'text-gold-600 border-b-2 border-gold-600'
+                : 'text-forest-700'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="lg:hidden p-2 rounded-md text-forest-700 hover:bg-forest-50"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="hidden lg:hidden pb-4">
+      <div class="flex flex-col space-y-2">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              currentPath === item.href
+                ? 'bg-gold-50 text-gold-700'
+                : 'text-forest-700 hover:bg-forest-50'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

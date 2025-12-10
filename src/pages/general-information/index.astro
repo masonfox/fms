@@ -1,0 +1,145 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import Button from '@components/Button.astro';
+---
+
+<BaseLayout
+  title="General Information"
+  description="Important information about Fox Mortuary Services including death certificate preparation, transportation requirements, and professional standards."
+>
+  <Hero
+    title="General Information"
+    subtitle="Important details for funeral homes we serve"
+    height="medium"
+  />
+
+  <Section padding="large">
+    <div class="max-w-4xl mx-auto">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mb-6">
+          About Our Services
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Fox Mortuary Services, LLC is a licensed funeral trade establishment based in
+          Wauseon, Ohio. We provide comprehensive professional services to funeral homes
+          throughout Northwest Ohio, Southern Michigan, and Northeast Indiana.
+        </p>
+
+        <div class="bg-gold-50 border-l-4 border-gold-500 p-6 rounded-r-lg mb-8">
+          <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+            Important Notice
+          </h3>
+          <p class="text-gray-700">
+            Fox Mortuary Services works exclusively with funeral homes and funeral industry
+            professionals. We do not provide services directly to the general public. If you
+            are seeking funeral services for a loved one, please contact a local funeral home.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Professional Standards
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          All services provided by Fox Mortuary Services meet or exceed industry standards
+          and Ohio state licensing requirements. Our team maintains active memberships in
+          professional organizations including:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8">
+          <li>American Society of Embalmers</li>
+          <li>Ohio Embalmers Association</li>
+          <li>Chamber of Commerce</li>
+        </ul>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Death Certificate Information
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We provide prompt death certificate and document preparation services to support
+          funeral homes in their administrative responsibilities. Our experienced staff
+          ensures accuracy and timely filing of all required documentation.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Proper documentation is essential for funeral homes to serve families effectively.
+          We work closely with funeral directors to ensure all paperwork is completed
+          correctly and submitted in a timely manner.
+        </p>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Transportation Services
+        </h2>
+        <div class="bg-forest-50 p-6 rounded-lg mb-8">
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Fox Mortuary Services provides comprehensive transportation services including:
+          </p>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-gold-600 mr-3 mt-1">•</span>
+              <span>Professional removal services throughout our tri-state service area</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-600 mr-3 mt-1">•</span>
+              <span>Overland transportation for local and regional needs</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-600 mr-3 mt-1">•</span>
+              <span>Domestic shipping for out-of-state transfers</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-gold-600 mr-3 mt-1">•</span>
+              <span>International shipping as a known shipper</span>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Facilities
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Our Ohio-licensed facilities are equipped to handle all aspects of embalming,
+          preparation, and restoration. We also provide on-site services at funeral homes
+          when needed.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          All work is performed by our owner and full-time staff, ensuring consistent quality
+          and professional care. This personal commitment sets us apart from other service
+          providers in the region.
+        </p>
+
+        <h2 class="text-3xl font-serif font-bold text-forest-800 mt-12 mb-6">
+          Service Philosophy
+        </h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We understand that funeral service by its very nature is as varied as the
+          individuals served in each community. Our experience of over 30 years has taught
+          us to adapt to the unique needs of each funeral home while maintaining consistent
+          professional standards.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          The trust that funeral homes place in Fox Mortuary Services is something we take
+          seriously. Every service we provide is performed with respect, dignity, and
+          attention to detail.
+        </p>
+
+        <div class="bg-white border-2 border-forest-700 p-8 rounded-lg mt-12">
+          <h3 class="text-2xl font-serif font-semibold text-forest-800 mb-4 text-center">
+            Questions or Need More Information?
+          </h3>
+          <p class="text-gray-700 text-center mb-6">
+            We're available 24/7 to answer your questions and discuss how we can support
+            your funeral home.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact/" variant="primary" size="large">
+              Contact Us
+            </Button>
+            <Button href="/services/" variant="outline" size="large">
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

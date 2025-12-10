@@ -1,0 +1,206 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import Section from '@components/Section.astro';
+import Card from '@components/Card.astro';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Contact Fox Mortuary Services for professional funeral trade services. Available 24/7 to serve funeral homes across the tri-state area."
+>
+  <Hero
+    title="Contact Us"
+    subtitle="We're here to support your funeral home 24/7"
+    height="medium"
+  />
+
+  <Section padding="large">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-3xl font-serif font-bold text-forest-800 mb-8">
+            Get in Touch
+          </h2>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            Fox Mortuary Services is available 24 hours a day, 7 days a week to serve
+            funeral homes throughout Northwest Ohio, Southern Michigan, and Northeast Indiana.
+            Contact us anytime to discuss your needs.
+          </p>
+
+          <div class="space-y-6">
+            <Card>
+              <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+                Phone
+              </h3>
+              <p>
+                <a href="tel:+14196303344" class="text-forest-700 hover:text-gold-600 text-lg font-medium">
+                  (419) 630-3344
+                </a>
+              </p>
+            </Card>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h3 class="text-xl font-serif font-semibold text-forest-800 mb-6">
+                Send Us a Message
+              </h3>
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                class="space-y-4"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-forest-600 focus:border-transparent"
+                  />
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-forest-600 focus:border-transparent"
+                  />
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+                    Comments or Questions
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-forest-600 focus:border-transparent resize-y"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="w-full bg-forest-700 text-white px-6 py-3 rounded-md font-medium hover:bg-forest-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-forest-600"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+
+              <p class="text-xs text-gray-500 mt-4">
+                Or email us directly at
+                <a href="mailto:foxmortuaryservices@gmail.com" class="text-forest-700 hover:text-gold-600">
+                  foxmortuaryservices@gmail.com
+                </a>
+              </p>
+            </div>
+
+            <Card>
+              <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+                Location
+              </h3>
+              <p class="text-gray-700">
+                Bryan, OH
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        <!-- Service Hours & Information -->
+        <div>
+          <h2 class="text-3xl font-serif font-bold text-forest-800 mb-8">
+            Service Information
+          </h2>
+
+          <div class="bg-forest-50 border-l-4 border-forest-600 p-6 rounded-r-lg mb-6">
+            <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+              Availability
+            </h3>
+            <p class="text-gray-700 text-lg font-medium mb-2">
+              24 Hours a Day, 7 Days a Week
+            </p>
+            <p class="text-gray-600">
+              We understand that funeral service needs can arise at any time. Our team is
+              always available to respond to your calls and requests.
+            </p>
+          </div>
+
+          <div class="bg-gold-50 border-l-4 border-gold-600 p-6 rounded-r-lg mb-6">
+            <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+              Who We Serve
+            </h3>
+            <p class="text-gray-700 mb-3">
+              Fox Mortuary Services is a licensed funeral trade establishment serving
+              funeral homes and industry professionals. We do not provide services directly
+              to the general public.
+            </p>
+            <p class="text-gray-700">
+              If you are a funeral director or funeral home operator seeking professional
+              trade services, we welcome your inquiry.
+            </p>
+          </div>
+
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="text-xl font-serif font-semibold text-forest-800 mb-3">
+              Our Service Area
+            </h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center">
+                <span class="text-gold-600 mr-3">→</span>
+                Northwest Ohio
+              </li>
+              <li class="flex items-center">
+                <span class="text-gold-600 mr-3">→</span>
+                Southern Michigan
+              </li>
+              <li class="flex items-center">
+                <span class="text-gold-600 mr-3">→</span>
+                Northeast Indiana
+              </li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              Professional removal, embalming, cremation, and transportation services
+              available throughout our service area.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Management -->
+      <div class="mt-16 text-center">
+        <div class="bg-white border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
+          <h3 class="text-2xl font-serif font-semibold text-forest-800 mb-2">
+            David H. Fox, Jr.
+          </h3>
+          <p class="text-gold-700 font-medium mb-4">Managing Director</p>
+          <p class="text-gray-700">
+            With over 30 years of experience serving the funeral industry, David leads
+            Fox Mortuary Services with a commitment to professional excellence and
+            respectful service to funeral homes throughout the tri-state area.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
